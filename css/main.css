@@ -1,0 +1,25 @@
+body {
+    background-color: rgb(236, 236, 236) !important;
+}
+
+.formulario {
+    color: white;
+    background-color: rgb(5, 48, 77);
+    border-radius: 20px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 20px;
+    width: 80%;
+}
+
+.form-floating {
+    color: black;
+}
+
+.invalid-feedback {
+    color: rgb(253, 5, 5);
+}
+
+.valid-feedback {
+    color: rgb(red, green, rgb(92, 212, 37))
+}

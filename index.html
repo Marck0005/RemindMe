@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <script src='js/main.js'></script>
+</head>
+
+<body>
+    <div class="formulario d-flex align-items-center justify-content-center">
+        <div class="col-6">
+            <h1>Regístrese en RemindMe</h1>
+        </div>
+        <div class="col-6">
+            <form class="row g-3 needs-validation" novalidate>
+                <div class="row g-3">
+                    <h3>Nombre y Apellidos</h3>
+                    <div class="col-3">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Nombre" placeholder="Nombre" required>
+                            <label for="Nombre">Nombre</label>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Introduzca su Nombre</div>
+                        </div>
+                    </div>
+
+                    <div class="col-9">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required>
+                            <label for="Apellidos">Apellidos</label>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Introduzca sus Apellidos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <h3>Correo Electrónico</h3>
+                    <div class="col-12">
+
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="Correo" placeholder="Correo" required>
+                            <label for="Correo">Correo</label>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Introduzca su Correo</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row g-3">
+                    <h3>Contraseña</h3>
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="Contraseña" placeholder="Constraseña" required>
+                            <label for="Contraseña">Contraseña</label>
+                            <div class="valid-feedback"></div>
+                            <div class="invalid-feedback">Introduzca una contraseña valida</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row g-3">
+                    <h3>Rol</h3>
+                    <div class="col-6">
+
+                        <input class="form-check-input" type="radio" name="radio" id="Cuidador">
+                        <label for="Cuidador">Cuidador</label>
+                        <input class="form-check-input" type="radio" name="radio" id="Familiar">
+                        <label for="Familiar">Familiar</label>
+
+                    </div>
+                    <div class="col-6 form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="Condiciones" required>
+                        <label class="form-check-label" for="Condiciones">
+                            Acepto los términos y condiciones.
+                        </label>
+                        <div id="invalidCheck3Feedback" class="invalid-feedback">
+                            Debes aceptar para continuar.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="">
+                    <button class="btn btn-primary" type="submit">Registrarse</button>
+                </div>
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+
+
+</body>
+
+</html>
