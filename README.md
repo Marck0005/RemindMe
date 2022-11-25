@@ -3,20 +3,21 @@
 
 RemindMe es una aplicación especializada para ayudar a la gestión del cuidado de personas con problemas de memoria.
 
+## Manual de uso
 
+Para poder usar la aplicación, no es necesario descargarse el código fuente, si no que tiene que acceder a la URL
+http://remind-me.duckdns.org/
 
 ## Manual de instalación
 
-Para poder usar el proyecto, se necesita tener una base de datos en local, o tener la IP pública
-donde está enlazada la base de datos. Vamos a explicar las dos formas:
-
-#### BASE DE DATOS LOCAL
 Clone el proyecto en una carpeta local
 ```bash
   git clone https://github.com/Marck0005/RemindMe.git
 ```
-Descargue MySQL si no lo tiene aún desde la siguiente web: https://www.mysql.com/downloads/
-Cree una base de datos llamada "Usuarios", en la que sus columnas deben tener los siguientes atributos:
+## Datos varios de la página
+#### Base de datos
+
+La base de datos tiene la siguiente estructura:
 
 | Variable             | Tipo                                                               | Checks |
 | ----------------- | ------------------------------------------------------------------ | ------------------ |
@@ -27,13 +28,11 @@ Cree una base de datos llamada "Usuarios", en la que sus columnas deben tener lo
 | Apellidos | VARCHAR[255] | none |
 | Rol | VARCHAR[255] | none |
 
-En tercer lugar, cambie el script "Connection.php" la IP que aparece por "localhost"
+#### Errores
 
-
-#### BASE DE DATOS REMOTA
-
-Pregunte a Fernando Ramírez por la IP pública de la RaspberryPI. Esta clave pública se reinicia cada cierto tiempo, 
-así que asegúrese de que pedirla al momento en que vaya a probar la aplicación
+Si presenta errores a la hora de acceder a la página, contacte con algún miembro del equipo. Un fallo
+posible podría ser que se haya caído el router que hostea la página, y haya que actualizar la IP de 
+un script.
 
 ## Autores
 
