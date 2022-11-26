@@ -1,15 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 body {
-    background-color: rgb(236, 236, 236) !important;
+    background-color: #2683C6 !important;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+}
+
+.fondoForms {
+    background: url(../media/fondo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .formulario {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
     color: white;
-    background-color: rgb(5, 48, 77);
-    border-radius: 20px;
+    background-color: rgb(48, 48, 48, 0.95);
+    border-radius: 0px 20px 20px 0px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    padding: 20px;
+    /* margin: 0 auto; */
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 80%;
+}
+
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.formulario h1 {
+    text-align: center !important;
+    padding: 35px;
+}
+
+.btn {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+.botonRegistro {
+    text-align: end;
+}
+
+.botonLogin {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.aceptar {
+    padding-left: 32px;
+    padding-top: 10px;
+}
+
+.alt-option {
+    text-align: center;
+    margin: 12px;
 }
 
 .form-floating {
@@ -17,7 +72,7 @@ body {
 }
 
 .invalid-feedback {
-    color: rgb(253, 5, 5);
+    color: #DC3545;
 }
 
 .valid-feedback {
