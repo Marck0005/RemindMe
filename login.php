@@ -1,22 +1,36 @@
 <?php
 	include('db.php');
+
+    
 	$correo=$_POST['Correo-in'];
-	$contraseña=$_POST['Contraseña-in'];
+	$contraseña=password_hash($_POST['Contraseña-in'], PASSWORD_DEFAULT);
 	session_start();
     
+    if(isset($_SESSION['Correo'])){
+        header("Location: prueba.php");
+    }
 	$conexion=mysqli_connect("79.146.203.50","admin","admin","RemindMe");
-
-
-    $consulta="SELECT * FROM Usuarios WHERE Correo='$correo' and Contraseña='$contraseña'";
-
+    
+    
+    $consulta="SELECT * FROM Usuarios WHERE Correo='$correo'";
+    
     $resultado=mysqli_query($conexion,$consulta);
     
-    
-	if($resultado->num_rows > 0){
-        $_SESSION['Correo']=$correo;
-		header("Location: index.php");
+    if($resultado->num_rows > 0){
+        if($row = $resultado->fetch_assoc()){
+            if(password_verify($_POST['Contraseña-in'], $row['Contraseña'])){
+                $_SESSION['Correo'] = $row['Correo'];
+                $_SESSION['Rol'] = $row['Rol'];
+                $_SESSION['Nombre'] = $row['Nombre'];
+                $_SESSION['Apellidos'] = $row['Apellidos'];
+                $_SESSION['ID'] = $row['ID'];
+                header("Location: prueba.php");
+            }else{
+                echo "Contraseña incorrecta";
+            }
+        }
 	}
-
+    
 	mysqli_free_result($resultado);
 	mysqli_close($conexion);
  
@@ -39,7 +53,6 @@
 </head>
 
 <body>
-    <h1><?php echo $correo ?></h1>
     <div class="center">
         <div class="formulario d-flex align-items-center justify-content-center">
             <div class="col-6">
@@ -51,7 +64,7 @@
             <div class="col-4">
                 <form class="row g-3 needs-validation" action="login.php" method="POST" novalidate >
 
-
+ 
                     <div class="row g-3">
                         <h3>Correo Electrónico</h3>
                         <div class="col-12">
