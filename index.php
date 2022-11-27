@@ -1,3 +1,32 @@
+<?php
+$db_connection=mysqli_connect("79.146.203.50","admin","admin","RemindMe");
+
+if(isset($_REQUEST['register'])){
+
+        $correo=$_POST['correo-in'];
+        $contraseña=password_hash($_POST['contraseña-in'], PASSWORD_DEFAULT);
+        $nombre=$_POST['nombre-in'];
+        $apellido=$_POST['apellidos-in'];
+        $rol=$_POST['rol-in'];
+        $query = "SELECT * FROM Usuarios WHERE Correo='$correo'";
+        $result = mysqli_query($db_connection,$query);
+        $num = mysqli_num_rows($result);
+        if($num == 1 || $num >= 1){
+            echo "Correo ya registrado";
+        }else{
+            $consulta="INSERT INTO Usuarios (Correo, Contraseña, Nombre, Apellidos, Rol) VALUES ('$correo', '$contraseña', '$nombre', '$apellido', '$rol')";
+            header("Location: login.php");
+        }
+
+        $resultado=mysqli_query($db_connection,$consulta);
+
+    }
+
+mysqli_free_result($resultado);
+
+mysqli_close($db_connection);
+?>
+
 <!DOCTYPE html>
 <html class="fondoForms">
 
@@ -22,12 +51,12 @@
                 <h1>RM (Logo)</h1>
             </div>
             <div class="col-6">
-                <form class="row g-3 needs-validation" novalidate>
+                <form class="row g-3 needs-validation" action="index.php" method="POST" novalidate>
                     <div class="row g-3">
                         <h3>Nombre y Apellidos</h3>
                         <div class="col-5">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="Nombre" placeholder="Nombre" required>
+                                <input type="text" class="form-control" id="Nombre" placeholder="Nombre" name="nombre-in" required>
                                 <label for="Nombre">Nombre</label>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Introduzca su Nombre</div>
@@ -36,7 +65,7 @@
 
                         <div class="col-7">
                             <div class="form-floating">
-                                <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" required>
+                                <input type="text" class="form-control" id="Apellidos" placeholder="Apellidos" name="apellidos-in" required>
                                 <label for="Apellidos">Apellidos</label>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Introduzca sus Apellidos</div>
@@ -49,7 +78,7 @@
                         <div class="col-12">
 
                             <div class="form-floating">
-                                <input type="email" class="form-control" id="Correo" placeholder="Correo" required>
+                                <input type="email" class="form-control" id="Correo" placeholder="Correo" name="correo-in" required>
                                 <label for="Correo">Correo</label>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Introduzca su Correo</div>
@@ -62,7 +91,7 @@
                         <h3>Contraseña</h3>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="password" class="form-control" id="Contraseña" placeholder="Constraseña" required>
+                                <input type="password" class="form-control" id="Contraseña" placeholder="Constraseña" name="contraseña-in" required>
                                 <label for="Contraseña">Contraseña</label>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Introduzca una contraseña valida</div>
@@ -77,7 +106,7 @@
                         <div class="col">
                             <div class="row g-3">
                                 <div class="col-6">
-                                    <input class="form-check-input" type="radio" name="radio" id="Cuidador" required>
+                                    <input class="form-check-input" type="radio" name="radio" id="Cuidador" name="rol-in" value="Cuidador" required>
                                     <label for="Cuidador">Cuidador</label>
                                     <div class="invalid-feedback">
                                         Seleccione una opción para continuar.
@@ -86,7 +115,7 @@
                                 </div>
 
                                 <div class="col-6">
-                                    <input class="form-check-input" type="radio" name="radio" id="Familiar" required>
+                                    <input class="form-check-input" type="radio" name="radio" id="Familiar" name="rol-in" value="Familiar" required>
                                     <label for="Familiar">Familiar</label>
 
                                 </div>
@@ -105,10 +134,10 @@
                             </div>
                         </div>
                         <div class="col-4 botonRegistro">
-                            <button class="btn btn-primary btn-lg" type="submit" onclick="validateForm()">Regístrate</button>
+                            <button class="btn btn-primary btn-lg" type="submit" name="register" onclick="validateForm()">Regístrate</button>
                         </div>
                     </div>
-                    <p class="alt-option">¿Ya está registrado? <a href="login.html">Inicie sesión aquí</a></p>
+                    <p class="alt-option">¿Ya está registrado? <a href="login.php">Inicie sesión aquí</a></p>
 
                 </form>
             </div>
