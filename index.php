@@ -99,30 +99,25 @@ mysqli_close($db_connection);
                         </div>
                     </div>
 
-
+                    
 
                     <div class="row g-3">
                         <h3>Rol</h3>
                         <div class="col">
-                            <div class="row g-3">
-                                <div class="col-6">
-                                    <input class="form-check-input" type="radio" name="radio" id="Cuidador" name="rol-in" value="Cuidador" required>
-                                    <label for="Cuidador">Cuidador</label>
-                                    <div class="invalid-feedback">
-                                        Seleccione una opción para continuar.
-                                    </div>
 
-                                </div>
+                            <select class="form-select" id="rol" name="rol-in" required>
+                            <option selected disabled value="">Seleccione un Rol...</option>
+                            <option value="Cuidador">Cuidador</option>
+                            <option value="Familiar">Familiar</option>
+                            </select>
 
-                                <div class="col-6">
-                                    <input class="form-check-input" type="radio" name="radio" id="Familiar" name="rol-in" value="Familiar" required>
-                                    <label for="Familiar">Familiar</label>
-
-                                </div>
+                            <div class="invalid-feedback">
+                            Seleccione un rol para continuar.
                             </div>
                         </div>
 
                     </div>
+                    
                     <div class="row g-3">
                         <div class="col-8 form-check aceptar">
                             <input class="form-check-input" type="checkbox" value="" id="Condiciones" required>
