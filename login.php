@@ -2,14 +2,20 @@
 	include('db.php');
 
     
-	$correo=$_POST['Correo-in'];
-	$contraseña=password_hash($_POST['Contraseña-in'], PASSWORD_DEFAULT);
+	$correo=$_POST['Correo-in'];    // Capturamos el correo
+	$contraseña=password_hash($_POST['Contraseña-in'], PASSWORD_DEFAULT);       // Y la contraseña, y la encriptamos mediante password_hash
 	session_start();
     
     if(isset($_SESSION['Correo'])){
         header("Location: prueba.php");
     }
-	$conexion=mysqli_connect("79.146.203.50","admin","admin","RemindMe");
+    /*
+            IMPORTANTE
+    Si se va la luz de la casa de fer,
+    hay que cambiar la ip a la nueva ip.
+    */
+    $ip="79.146.203.50";
+	$conexion=mysqli_connect("$ip","admin","admin","RemindMe");   // Establecemos la conexión
     
     
     $consulta="SELECT * FROM Usuarios WHERE Correo='$correo'";

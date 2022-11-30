@@ -36,12 +36,12 @@ un script.
 
 ## Autores
 
-- [Iker Rodríguez](https://www.github.com/ikerUFV)
-- [Fernando Ramírez](https://www.github.com/fernando5514)
-- [Andrés Arévalo](https://www.github.com/AndresUFV)
-- [Samuel Juárez](https://www.github.com/samueljuarezgordon)
-- [Yago Baamonde](https://www.github.com/AndresUFV)
-- [Álvaro Ramos](https://www.github.com/AndresUFV)
-- [Marcos Mela](https://www.github.com/AndresUFV)
-- [Raúl Vara](https://www.github.com/AndresUFV)
-- [Juan Ludovic Chinchilla](https://www.github.com/AndresUFV)
+- [Iker Rodríguez](https://github.com/ikerUFV)
+- [Fernando Ramírez](https://github.com/fernando5514)
+- [Andrés Arévalo](https://github.com/AndresUFV)
+- [Samuel Juárez](https://github.com/samueljuarezgordon)
+- [Yago Baamonde](https://github.com/YBaamondeUFV)
+- [Álvaro Ramos](https://github.com/AlvaroRamos02)
+- [Marcos Mela](https://github.com/Marck0005)
+- [Raúl Vara](https://github.com/raulvg01)
+- [Juan Ludovic Chinchilla](https://github.com/Chinchi19)
