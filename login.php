@@ -14,7 +14,7 @@
     Si se va la luz de la casa de fer,
     hay que cambiar la ip a la nueva ip.
     */
-    $ip="79.146.203.50";
+    $ip="79.146.193.17";
 	$conexion=mysqli_connect("$ip","admin","admin","RemindMe");   // Establecemos la conexión
     
     

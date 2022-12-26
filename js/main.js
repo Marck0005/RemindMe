@@ -1,11 +1,13 @@
-function deleteButtons(){
-    var parent = event.target.parentNode;
-    for(var i = 0; i < 3; i++){
-        var parent = parent.parentNode;
-    }
-    parent.remove();
-}
-
+function deleteButtons() {
+      var buttons = document.querySelectorAll("#Eliminar");
+      buttons.forEach(function(button) {
+         button.addEventListener("click", function() {
+            var id = this.getAttribute("data-id");
+            // Envía una solicitud de eliminación al archivo eliminar.php con el id del paciente como parámetro
+            window.location.href = "eliminar.php?idPacientes=" + id;
+         });
+      });
+   }
 function validateForm() {
     'use strict'
 

@@ -1,5 +1,5 @@
 <?php
-$db_connection=mysqli_connect("79.146.203.50","admin","admin","RemindMe");
+$db_connection=mysqli_connect("79.146.193.17","admin","admin","RemindMe");
 
 if(isset($_REQUEST['register'])){   // Registro de usuario + encriptación de contraseña
 
