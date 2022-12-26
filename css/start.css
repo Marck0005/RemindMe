@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+nav {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+img {
+    border-radius: 7px;
+    object-fit: cover;
+}
+
+.alinearCentro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.infoPaciente {
+    padding-top: 15px;
+}
+
+.thumbnail {
+    background-color: rgb(7, 7, 7, 0.1);
+    border-radius: 7px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.divLogo {
+    padding-top: 7px;
+    padding-bottom: 2px;
+}
+
+.logo {
+    margin-top: -8px;
+    padding-right: 10px;
+}
+
+.list-group {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+
+.row {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
