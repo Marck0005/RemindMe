@@ -26,3 +26,9 @@ function validateForm() {
         }, false)
     })
 }
+
+function load() {
+    deleteButtons();
+}
+
+document.addEventListener("DOMContentLoaded", load, false);

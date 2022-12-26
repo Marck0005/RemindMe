@@ -60,7 +60,7 @@
             echo '<p>Habitacion '.$row['habitacion'].'<br>'.$row['edad'].' Años<br>'.$row['medicamentos'].'</p>';
             echo '<p>';
             echo '<a href="#" class="btn btn-primary" role="button">Perfil</a>';
-            echo '<a href="#" class="btn btn-primary" role="button" id="Eliminar" data-id="'.$row['idPacientes'].'" onclick="deleteButtons()">Eliminar</a>';            echo '</div>';
+            echo '<a href="#" class="btn btn-primary" role="button" id="Eliminar" data-id="'.$row['idPacientes'].'">Eliminar</a>';            echo '</div>';
             echo '</div>';
             echo '</div>';
             }// Cerramos la conexión a la base de datos
