@@ -1,3 +1,11 @@
+function deleteButtons(){
+    var parent = event.target.parentNode;
+    for(var i = 0; i < 3; i++){
+        var parent = parent.parentNode;
+    }
+    parent.remove();
+}
+
 function validateForm() {
     'use strict'
 
