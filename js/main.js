@@ -8,6 +8,7 @@ function deleteButtons() {
          });
       });
    }
+
 function validateForm() {
     'use strict'
 
