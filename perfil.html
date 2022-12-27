@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="fondoForms">
+<html>
 
 <head>
     <meta charset='utf-8'>
@@ -13,9 +13,6 @@
     </script>
     <link rel='stylesheet' type='text/css' media='screen' href='css/start.css'>
     <script src='js/main.js'></script>
-
-
-
 </head>
 
 <body>
@@ -32,10 +29,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="inicio.php">Pacientes</a>
+                        <a class="nav-link" aria-current="page" href="inicio.php">Pacientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="perfil.php">Perfil</a>
+                        <a class="nav-link active" href="perfil.php">Perfil</a>
                     </li>
 
                 </ul>
@@ -43,25 +40,98 @@
             </div>
         </div>
     </nav>
-    <h3>Introduzca los detalles del nuevo residente:</h3>
-    <div class="formularioPaciente">
-        <form id="formulario" method="POST" action="procesar.php">
-            <label for="nombre">Nombre:</label><br>
-            <input type="text" id="nombre" name="nombre"><br>
-            <label for="apellidos">Apellidos:</label><br>
-            <input type="text" id="apellidos" name="apellidos"><br>
-            <label for="numero_habitacion">Número de habitación:</label><br>
-            <input type="text" id="numero_habitacion" name="numero_habitacion"><br>
-            <label for="medicamentos">Medicamentos:</label><br>
-            <input type="text" id="medicamentos" name="medicamentos"><br>
-            <label for="edad">Edad:</label><br>
-            <input type="number" id="edad" name="edad"><br><br>
-            <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-light">Enviar</button>
+
+    <div class="row">
+
+
+
+
+        <div class="col-12 fotoCentro">
+            <img src="/media/unknown1.png" height="120" width="120" alt="imagen paciente">
+        </div>
+        <div class="col-12">
+            <h3 class="nombrePac">Yago Ramírez Juárez</h3>
+        </div>
+
+
+
+
+        <div class="col-6">
+            <div class="containerPerfil">
+                <h5>Acerca Del Cuidador</h5>
+                <p>Centro: Virgen de la Nueva<br>Antigúedad: 5 años <br>Correo: yago.rj@gmail.com</p>
             </div>
 
-        </form>
+        </div>
+        <div class="col-6">
+            <div class="containerPerfil">
+                <h5>Próximas Actividades</h5>
+                <table class="default">
+
+                    <tr>
+
+                        <th>Hora</th>
+
+                        <th>Actividad</th>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>10:00</td>
+
+                        <td>Cita medica</td>
+
+
+                    </tr>
+
+                    <tr>
+
+                        <td>12:00</td>
+
+                        <td>Gimnasio</td>
+
+
+                    </tr>
+                    <tr>
+
+                        <td>13:30</td>
+
+                        <td>Cita med</td>
+
+
+                    </tr>
+                    <tr>
+
+                        <td>16:00</td>
+
+                        <td>Visita programada</td>
+
+
+                    </tr>
+                    <tr>
+
+                        <td>19:30</td>
+
+                        <td>Cena</td>
+
+
+                    </tr>
+
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="fotoCentro">
+            <a href="#" class="btn btn-danger" role="button" id="" data-id="">Cerrar Sesión</a>
+
+        </div>
+
     </div>
+
+
 
 </body>
 
