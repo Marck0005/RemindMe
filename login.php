@@ -5,11 +5,7 @@
 	$correo=$_POST['Correo-in'];    // Capturamos el correo
 	$contraseña=password_hash($_POST['Contraseña-in'], PASSWORD_DEFAULT);       // Y la contraseña, y la encriptamos mediante password_hash
 	session_start();
-    
-    if(isset($_SESSION['Correo'])){
-        header("Location: prueba.php");
-    }
-    /*
+        /*
             IMPORTANTE
     Si se va la luz de la casa de fer,
     hay que cambiar la ip a la nueva ip.
@@ -30,7 +26,7 @@
                 $_SESSION['Nombre'] = $row['Nombre'];
                 $_SESSION['Apellidos'] = $row['Apellidos'];
                 $_SESSION['ID'] = $row['ID'];
-                header("Location: prueba.php");
+                header("Location: inicio.php");
             }else{
                 echo "Contraseña incorrecta";
             }

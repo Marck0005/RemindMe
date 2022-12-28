@@ -32,7 +32,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Pacientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Perfil</a>
+                        <a class="nav-link" href="perfil.html">Perfil</a>
                     </li>
 
                 </ul>
@@ -59,6 +59,7 @@
             echo '</div>';
             echo '<div class="infoPaciente col-6">';
             echo '<h4>'.$row['nombre'].'</h4>';
+            echo '<h4>'.$row['apellidos'].'</h4>';
             echo '<p>Habitacion '.$row['habitacion'].'<br>'.$row['edad'].' Años<br>'.$row['medicamentos'].'</p>';
             echo '<p>';
             echo '<a href="paciente1.html" class="btn btn-primary" role="button">Perfil</a>';
